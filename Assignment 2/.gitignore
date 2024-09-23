@@ -1,4 +1,72 @@
-*~
+# Eclipse specific files
+.project
+.classpath
+.settings/
+
+# Ignore build folders
+bin/
+gen/
+target/
+
+# Ignore Maven files
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+!**/mvn/wrapper/maven-wrapper.jar
+!**/mvn/wrapper/maven-wrapper.properties
+!**/.mvn
+
+# Ignore EMF generated files
+*.ecore_diagram
+*.genmodel
+*.ecorediag
+*.emof
+*.uml
+*.xmi
+*.uml_diagram
+
+# Ignore EMF generated model code and other generated artifacts
+**/src-gen/
+**/model-gen/
+**/edit-gen/
+**/editor-gen/
+
+# Ignore temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*~.*
+
+# Ignore compiled files
+*.class
+
+# MacOS and Linux specific files
+.DS_Store
+Thumbs.db
+
+# Eclipse Plugin Configuration
+**/plugin.properties
+**/plugin.xml
+**/MANIFEST.MF
+
+# Ignore test reports
+/test-output/
+
+# Java specific
+*.jar
+*.war
+*.ear
+
+# Ignore IDE-specific settings
 .idea/
-target
-FootballTournamentApplication.iml
+*.iml
+*.iws
+.vscode/
+
+# Ignore logs and temp files
+logs/
+*.log
+*.out
+*.tmp
+*.swp
