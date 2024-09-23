@@ -3,11 +3,17 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fta_domain_model" nsURI="http://www.example.org/fta_domain_model"
     nsPrefix="fta_domain_model">
   <eClassifiers xsi:type="ecore:EClass" name="Team">
+    <eAnnotations source="teamConstraint">
+      <details key="teamSizeConstraint" value="self.players->size() >= 2"/>
+      <details key="teamTotalGoalsConstraint" value="self.players->collect(player | player.playerstatistics.goals)->sum()"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="players" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//Player" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="managerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalGoals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tournament">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

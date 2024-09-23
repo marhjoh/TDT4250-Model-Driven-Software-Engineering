@@ -26,6 +26,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/teamSize"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Team/players"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/managerName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/totalGoals"/>
     </genClasses>
     <genClasses ecoreClass="fta_domain_model.ecore#//Tournament">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Tournament/name"/>
