@@ -1,11 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fta_domain_model/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fta_domain_model/src-gen" creationIcons="false"
     editDirectory="/fta_domain_model.edit/src-gen" editorDirectory="/fta_domain_model.editor/src-gen"
     modelPluginID="fta_domain_model" modelName="Fta_domain_model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>fta_domain_model.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Fta_domain_model" disposableProviderFactory="true" ecorePackage="fta_domain_model.ecore#/"/>
+  <genPackages prefix="Fta_domain_model" disposableProviderFactory="true" ecorePackage="fta_domain_model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fta_domain_model.ecore#//PlayerPosition">
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//PlayerPosition/GOALKEEPER"/>
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//PlayerPosition/DEFENDER"/>
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//PlayerPosition/MIDFIELDER"/>
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//PlayerPosition/ATTACKER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fta_domain_model.ecore#//UserRole">
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//UserRole/ADMIN"/>
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//UserRole/MANAGER"/>
+      <genEnumLiterals ecoreEnumLiteral="fta_domain_model.ecore#//UserRole/VIEWER"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="fta_domain_model.ecore#//Date"/>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Team">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/teamSize"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Team/players"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Team/managerName"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Tournament">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Tournament/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Tournament/tournamentType"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Tournament/matches"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Tournament/teams"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Tournament/tournamentformat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Tournament/numberOfTeams"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Tournament/brackets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Tournament/datastorage"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Match">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Match/scoreTeam1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Match/scoreTeam2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Match/matchResult"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Match/day"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Match/teams"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Match/matchrules"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Player/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Player/playerstatistics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Player/birthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Player/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Player/number"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Bracket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Bracket/rounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Bracket/bracketSide"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//Bracket/matches"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//User/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//User/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//User/tournaments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fta_domain_model.ecore#//User/userroles"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//TournamentFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//TournamentFormat/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//TournamentFormat/maxTeams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//TournamentFormat/minTeams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//TournamentFormat/description"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//DoubleElimination">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//DoubleElimination/numberOfRounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//DoubleElimination/finalsFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//RoundRobin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//RoundRobin/pointsForWin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//RoundRobin/pointsForDraw"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//RoundRobin/pointsForLoss"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//RoundRobin/numberOfRounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//RoundRobin/tieBreakerRule"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//SingleElimination">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//SingleElimination/numberOfRounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//SingleElimination/hasThirdPlacePlayoff"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//MatchRules">
+      <genOperations ecoreOperation="fta_domain_model.ecore#//MatchRules/applyRules"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Standard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Standard/tieBreaking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Standard/extraTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Standard/pentaltyShootouts"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//ExtraTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//ExtraTime/extraTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//ExtraTime/extraTimeDuration"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//PenaltyShootout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PenaltyShootout/pentaltyShootouts"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//GroupStage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//GroupStage/tieBreaking"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//UserRoles">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//UserRoles/canModifyTournament"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//UserRoles/canViewStats"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//UserRoles/canManageTeams"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//PlayerStatistics">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PlayerStatistics/goals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PlayerStatistics/assists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PlayerStatistics/fouls"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PlayerStatistics/yellowCards"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//PlayerStatistics/redCards"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Defender">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Defender/cleansheets"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//Goalkeeper">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Goalkeeper/cleansheets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//Goalkeeper/saves"/>
+    </genClasses>
+    <genClasses ecoreClass="fta_domain_model.ecore#//DataStorage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//DataStorage/storageType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fta_domain_model.ecore#//DataStorage/location"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>
