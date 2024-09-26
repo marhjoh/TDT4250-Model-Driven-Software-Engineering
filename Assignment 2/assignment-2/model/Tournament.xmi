@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fta_domain_model:Tournament
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fta_domain_model="http://www.example.org/fta_domain_model"
+    xsi:schemaLocation="http://www.example.org/fta_domain_model fta_domain_model.ecore">
+  <brackets
+      rounds="1"
+      bracketSide="Left">
+    <matches
+        scoreTeam1="2"
+        matchResult="2-0"
+        day="2024-09-26T00:00:00.000+0200"/>
+    <matches/>
+  </brackets>
+</fta_domain_model:Tournament>

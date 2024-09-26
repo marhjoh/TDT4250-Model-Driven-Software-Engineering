@@ -1,72 +1,33 @@
 # Eclipse specific files
+.metadata/
 .project
 .classpath
 .settings/
 
-# Ignore build folders
+# Mac-specific files
+.DS_Store
+
+# Java build files
 bin/
-gen/
 target/
+build/
 
-# Ignore Maven files
+# Maven specific files
 .mvn/
-.mvn/wrapper/maven-wrapper.jar
-.mvn/wrapper/maven-wrapper.properties
-!**/mvn/wrapper/maven-wrapper.jar
-!**/mvn/wrapper/maven-wrapper.properties
-!**/.mvn
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
 
-# Ignore EMF generated files
-*.ecore_diagram
-*.genmodel
-*.ecorediag
-*.emof
-*.uml
-*.xmi
-*.uml_diagram
-
-# Ignore EMF generated model code and other generated artifacts
-**/src-gen/
-**/model-gen/
-**/edit-gen/
-**/editor-gen/
-
-# Ignore temp files
+# Logs and temp files
 *.log
 *.tmp
 *.bak
 *.swp
-*~.*
 
-# Ignore compiled files
-*.class
+# Ignore Eclipse JDT specific files
+.recommenders/
 
-# MacOS and Linux specific files
-.DS_Store
-Thumbs.db
-
-# Eclipse Plugin Configuration
-**/plugin.properties
-**/plugin.xml
-**/MANIFEST.MF
-
-# Ignore test reports
-/test-output/
-
-# Java specific
-*.jar
-*.war
-*.ear
-
-# Ignore IDE-specific settings
-.idea/
-*.iml
-*.iws
-.vscode/
-
-# Ignore logs and temp files
-logs/
-*.log
-*.out
-*.tmp
-*.swp
+# Ignore specific to Eclipse EGit
+/.git/
