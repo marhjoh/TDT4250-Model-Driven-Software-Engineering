@@ -1,0 +1,17 @@
+The Football Tournament Application (FTA) is a software designed to facilitate and manage football tournaments. With the suggested variability improvements it offers a comprehensive solution for organizing different tournament formats, managing teams, tracking player performance, and allowing custom rules. It also, as previously before those modifications, covers essential aspects of tournament management such as match scheduling and bracket generation. The application can potentially be extended for various sports beyond football - as it aims to be adaptable.
+
+The system supports various tournament formats, including single-elimination, double-elimination, and round-robin formats. Each format represents a different method for progressing through the tournament rounds, handling the number of teams, and deciding the winner. For example, single-elimination removes a team after one loss, whereas round-robin allows teams to compete in multiple matches before elimination.
+
+A team consists of multiple players, and each team participates in the tournament. Players have various statistics associated with their performance, such as goals, assists, fouls, and special roles like goalkeepers or forwards. Team management includes registering players, defining team size, and assigning a manager for each team. Teams are assigned to matches and tournaments.
+
+Player statistics are a key component of the FTA, allowing the system to track individual player performance throughout the tournament. The system records metrics such as goals scored, assists, fouls, and more. Player roles are differentiated by positions like Goalkeeper, Defender, Midfielder, and Attacker, and the statistics tracked can vary based on their role. 
+
+The application supports various match rules, which can be customized per match or tournament. These rules are defined through a MatchRules class, allowing different types of rule configurations such as standard match rules, penalty shootouts, or group-stage rules.
+
+The FTA defines multiple user roles (Admin, Manager, Viewer) to control access to the system’s functionality. An administrator has full access to create and manage tournaments, whereas managers may only manage teams, and viewers have limited access for viewing tournament progress.
+
+The system dynamically generates brackets based on the tournament structure and the number of participating teams. Each bracket is updated as matches progress, displaying the results and the teams advancing to the next round. Brackets are particularly important in single- or double-elimination tournaments.
+
+The application provides data storage and persistence options, enabling tournament data to be saved and reloaded across sessions. This allows tournament organizers to pause and resume tournaments without losing any data. 
+
+The FTA has been designed with a Software Product Line (SPL) vision, where multiple products (for different sports and tournament structures) can be generated from the same base system. The system supports variability, allowing it to be customized for different sports, tournament rules, and player statistics.
