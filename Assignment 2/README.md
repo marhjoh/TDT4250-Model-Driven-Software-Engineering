@@ -8,12 +8,10 @@ Metamodel: Defined in Ecore to represent teams, players, matches, tournaments, t
 - Constraints & Derived Features: Includes non-trivial constraints and derived features, such as team size constraints and total goals derived from players' statistics.
 
 ## Repository Structure
-- model/: Contains the Ecore model files and corresponding generated code.
+- model/: Contains the Ecore model files and corresponding generated code and example model instances showing different configurations of the FTA.
 - src/: Java source files, including manual code additions for constraints and derived features.
 - tests/: Unit tests to validate constraints and derived features.
 - README.md: This documentation file.
-- example_instances/: Example model instances showing different configurations of the FTA.
-
 
 ## Running the Project
 1. Set up: Import the Eclipse project and ensure all dependencies (EMF, Ecore) are correctly configured.
