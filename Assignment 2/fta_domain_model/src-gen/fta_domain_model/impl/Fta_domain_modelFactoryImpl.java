@@ -409,7 +409,7 @@ public class Fta_domain_modelFactoryImpl extends EFactoryImpl implements Fta_dom
 	@Override
 	public PlayerStatistics createPlayerStatistics() {
 		// TODO Auto-generated method stub
-		return null;
+		return new GoalkeeperImpl();
 	}
 
 	@Override

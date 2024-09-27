@@ -240,7 +240,13 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 */
 	@Override
 	public int getTotalGoals() {
-		return totalGoals;
+	    int totalGoals = 0;
+	    for (Player player : getPlayers()) {
+	        if (player.getPlayerstatistics() != null) {
+	            totalGoals += player.getPlayerstatistics().getGoals();
+	        }
+	    }
+	    return totalGoals;
 	}
 
 	/**
