@@ -27,5 +27,5 @@ The following diagram illustrates the domain model, which captures the structure
 ### Test Results
 The following image shows the test results after running the unit tests to validate the constraints and derived features.
 
-![Test Results](./images/image.png)
+![Test Results](./images/testresults.png)
 
