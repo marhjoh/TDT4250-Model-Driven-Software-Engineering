@@ -13,6 +13,17 @@ The following diagram illustrates the domain model, which captures the structure
 
 ![Domain Model](./images/fta_domain_model.png)
 
+## Known Issues
+While the current domain model successfully captures most elements of the football tournament system, there are a few known issues that affected the dynamic `.xmi` model testing. 
+
+- The `PlayerStatistics` class is abstract, meaning it cannot be instantiated directly. However, there are only subclasses for `GoalkeeperStatistics` and `DefenderStatistics`.
+  
+- **Potential Redundancies**: Some attributes overlap in functionality, `MatchRules` subclasses. Refining these elements could improve clarity and reduce redundancy in the model.
+
+- **Effects on Testing**: This causes issues when trying to create complete `.xmi` instances for player types, teams, matches etc, as it leads to null or incomplete instances in dynamic tests.
+
+If the model were to be refined I would have started by building the model one entity at the time, though this was not the case for now.
+
 ## Repository Structure
 - **model/**: Contains the Ecore model files and corresponding generated code and example model instances showing different configurations of the FTA.
 - **src-gen/**: Java source generated files, including manual code additions for constraints and derived features.
