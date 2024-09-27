@@ -18,7 +18,7 @@ While the current domain model successfully captures most elements of the footba
 
 - The `PlayerStatistics` class is abstract, meaning it cannot be instantiated directly. However, there are only subclasses for `GoalkeeperStatistics` and `DefenderStatistics`.
   
-- **Potential Redundancies**: Some attributes overlap in functionality, `MatchRules` subclasses. Refining these elements could improve clarity and reduce redundancy in the model.
+- **Potential Redundancies**: Some attributes overlap in functionality, and some are incomplete due to dependencies from other entities. Refining these elements could improve clarity and reduce redundancy in the model.
 
 - **Effects on Testing**: This causes issues when trying to create complete `.xmi` instances for player types, teams, matches etc, as it leads to null or incomplete instances in dynamic tests.
 
