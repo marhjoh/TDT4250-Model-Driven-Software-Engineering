@@ -15,7 +15,7 @@ The following diagram illustrates the domain model, which captures the structure
 
 ## Repository Structure
 - **model/**: Contains the Ecore model files and corresponding generated code and example model instances showing different configurations of the FTA.
-- **src/**: Java source files, including manual code additions for constraints and derived features.
+- **src-gen/**: Java source generated files, including manual code additions for constraints and derived features.
 - **tests/**: Unit tests to validate constraints and derived features.
 - **README.md**: This documentation file.
 
