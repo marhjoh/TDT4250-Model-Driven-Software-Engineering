@@ -1,0 +1,7 @@
+The Football Tournament Application (FTA) is a software designed to facilitate and manage football tournaments. With the suggested variability improvements it offers a comprehensive solution for organizing different tournament formats, managing teams, tracking player performance, and allowing custom rules. It also, as previously before those modifications, covers essential aspects of tournament management such as match scheduling and bracket generation. The application can potentially be extended for various sports beyond football - as it aims to be adaptable.
+
+In this example only one variability measure is taken into account. With that one being PlayerStatistics.
+
+A team consists of multiple players, and each team participates in the tournament. Players have various statistics associated with their performance, such as goals, assists, fouls, and special roles like goalkeepers or forwards. Team management includes registering players, defining team size, and assigning a manager for each team. Teams are assigned to matches and tournaments.
+
+Player statistics are a key component of the FTA, allowing the system to track individual player performance throughout the tournament. The system records metrics such as goals scored, assists, fouls, and more. Player roles are differentiated by positions like Goalkeeper, Defender, Midfielder, and Attacker, and the statistics tracked can vary based on their role. 

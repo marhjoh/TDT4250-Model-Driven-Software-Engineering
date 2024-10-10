@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fta_domain_model:Tournament
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fta_domain_model="http://www.example.org/fta_domain_model"
+    xsi:schemaLocation="http://www.example.org/fta_domain_model ../model/fta_domain_model.ecore"
+    name="Champions League"
+    tournamentType="European Football"
+    numberOfTeams="2">
+  <matches scoreTeam1="2"
+      scoreTeam2="1"
+      matchResult="2-1">
+    <teams href="Chelsea.xmi#/"/>
+    <teams href="Juventus.xmi#/"/>
+  </matches>
+  <brackets
+      rounds="1"
+      bracketSide="Center"/>
+</fta_domain_model:Tournament>
