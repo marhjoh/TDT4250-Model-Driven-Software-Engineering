@@ -11,7 +11,7 @@ This repository contains the metamodel and generated code for the Football Tourn
 ### Domain Model
 The following diagram illustrates the domain model, which captures the structure of the Football Tournament Application.
 
-![Domain Model](./example_with_xmi_tests/images/fta_domain_model.png)
+![Domain Model](./images/fta_domain_model.png)
 
 ## Known Issues
 Firstly when I started this assignment the current I tried to capture most elements of the football tournament system - including the variability Enhancements. This made it a lot of work and technicalities at the same time, considering that Eclipse it not known beforehand. Therefore, to tackle some of the known issues described previously I started a bottom-up process to show clearly that I understand the concepts of this assignment. 
@@ -36,5 +36,5 @@ Firstly when I started this assignment the current I tried to capture most eleme
 ### Test Results
 The following image shows the test results after running the unit tests to validate the constraints and derived features.
 
-![Test Results](./example_with_xmi_tests/images/testresults.png)
+![Test Results](./images/testresults.png)
 
