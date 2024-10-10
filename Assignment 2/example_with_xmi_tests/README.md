@@ -22,6 +22,8 @@ Firstly when I started this assignment the current I tried to capture most eleme
 
 - Testing for .xmi` instances for player types, teams etc Works in dynamic tests as of now.
 
+![XMI Instances](./images/XMI_instances.png)
+
 ## Repository Structure
 - **model/**: Contains the Ecore model files and corresponding generated code and example model instances showing different configurations of the FTA.
 - **src-gen/**: Java source generated files, including manual code additions for constraints and derived features.
