@@ -1,0 +1,318 @@
+Tournament "Premier League 2024" {
+    tournamentType LEAGUE
+    teams {
+        Team "Manchester City" {
+            teamSize 3
+            managerName "Pep Guardiola"
+            players {
+                Player "Ederson Moraes" {
+                    position GOALKEEPER
+                    birthDate 1995-10-10
+                    number 31
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 8
+                        saves 50
+                    }
+                },
+                Player "Kevin De Bruyne" {
+                    position MIDFIELDER
+                    birthDate 1996-12-21
+                    number 17
+                    playerstatistics Attacker {
+                        goals 6
+                        assists 9
+                        fouls 1
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 81
+                    }
+                },
+                Player "Erling Haaland" {
+                    position ATTACKER
+                    number 9
+                    playerstatistics Attacker {
+                        goals 21
+                        assists 5
+                        fouls 2
+                        yellowCards 3
+                        redCards 0
+                        sprintSpeed 89
+                    }
+                }
+            }
+        },
+        Team "Liverpool" {
+            teamSize 3
+            managerName "Jürgen Klopp"
+            players {
+                Player "Alisson Becker" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 9
+                        saves 45
+                    }
+                },
+                Player "Mohamed Salah" {
+                    position ATTACKER
+                    birthDate 1991-02-04
+                    number 11
+                    playerstatistics Attacker {
+                        goals 15
+                        assists 5
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        sprintSpeed 85
+                    }
+                },
+                Player "Virgil van Dijk" {
+                    position DEFENDER
+                    number 4
+                    playerstatistics Defender {
+                        goals 3
+                        assists 2
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 10
+                    }
+                }
+            }
+        },
+        Team "Chelsea" {
+            teamSize 3
+            managerName "Mauricio Pochettino"
+            players {
+                Player "Kepa Arrizabalaga" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 6
+                        saves 42
+                    }
+                },
+                Player "Raheem Sterling" {
+                    position ATTACKER
+                    number 17
+                    playerstatistics Attacker {
+                        goals 8
+                        assists 4
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 87
+                    }
+                },
+                Player "Thiago Silva" {
+                    position DEFENDER
+                    number 6
+                    playerstatistics Defender {
+                        goals 2
+                        assists 1
+                        fouls 3
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 7
+                    }
+                }
+            }
+        },
+        Team "Arsenal" {
+            teamSize 3
+            managerName "Mikel Arteta"
+            players {
+                Player "Aaron Ramsdale" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 2
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 7
+                        saves 48
+                    }
+                },
+                Player "Bukayo Saka" {
+                    position ATTACKER
+                    number 7
+                    playerstatistics Attacker {
+                        goals 12
+                        assists 6
+                        fouls 1
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 83
+                    }
+                },
+                Player "Gabriel Magalhães" {
+                    position DEFENDER
+                    number 6
+                    playerstatistics Defender {
+                        goals 4
+                        assists 1
+                        fouls 2
+                        yellowCards 3
+                        redCards 0
+                        cleansheets 8
+                    }
+                }
+            }
+        },
+        Team "Tottenham Hotspur" {
+            teamSize 3
+            managerName "Ange Postecoglou"
+            players {
+                Player "Hugo Lloris" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 5
+                        saves 50
+                    }
+                },
+                Player "Son Heung-min" {
+                    position ATTACKER
+                    number 7
+                    playerstatistics Attacker {
+                        goals 9
+                        assists 3
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 88
+                    }
+                },
+                Player "Cristian Romero" {
+                    position DEFENDER
+                    number 6
+                    playerstatistics Defender {
+                        goals 1
+                        assists 1
+                        fouls 3
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 6
+                    }
+                }
+            }
+        }
+    }
+    tournamentformat League "Premier League 2024" {
+        maxTeams 5
+        minTeams 5
+        description "League format where each team plays every other team twice"
+        numberOfRounds 10
+        finalsFormat SINGLE_FINAL
+    }
+    brackets {
+        Bracket {
+            rounds 2
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2002-09-15
+                    teams ("Manchester City", "Liverpool")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 2
+                    matchResult LOSS
+                    day 2002-09-18
+                    teams ("Chelsea", "Arsenal")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 0
+                    scoreTeam2 3
+                    matchResult LOSS
+                    day 2002-09-19
+                    teams ("Tottenham Hotspur", "Liverpool")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 2
+                    matchResult DRAW
+                    day 2002-09-20
+                    teams ("Manchester City", "Chelsea")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 3
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2002-09-23
+                    teams ("Arsenal", "Tottenham Hotspur")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 0
+                    matchResult WIN
+                    day 2002-09-25
+                    teams ("Manchester City", "Arsenal")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 3
+                    matchResult LOSS
+                    day 2002-09-27
+                    teams ("Chelsea", "Tottenham Hotspur")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 0
+                    scoreTeam2 2
+                    matchResult LOSS
+                    day 2002-09-29
+                    teams ("Liverpool", "Arsenal")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 1
+                    matchResult DRAW
+                    day 2002-09-30
+                    teams ("Tottenham Hotspur", "Manchester City")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 3
+                    scoreTeam2 2
+                    matchResult WIN
+                    day 2002-09-31
+                    teams ("Chelsea", "Liverpool")
+                    matchrules Standard
+                }
+            }
+        }
+    }
+}

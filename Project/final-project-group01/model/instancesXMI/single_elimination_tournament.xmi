@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fta_domain_model:Tournament xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fta_domain_model="http://www.example.org/fta_domain_model" name="Single Elimination Cup" tournamentType="KNOCKOUT">
+  <teams name="Chelsea" managerName="Frank Lampard">
+    <players name="Raheem Sterling" position="ATTACKER" birthDate="1994-12-08T00:00:00.000+0100" age="30" number="7">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="8" assists="5" yellowCards="2" redCards="0"/>
+    </players>
+    <players name="Thiago Silva" position="DEFENDER" birthDate="1984-09-22T00:00:00.000+0200" age="40" number="6">
+      <playerstatistics xsi:type="fta_domain_model:Defender" goals="1" yellowCards="4"/>
+    </players>
+  </teams>
+  <teams name="Barcelona" managerName="Xavi Hernandez">
+    <players name="Robert Lewandowski" position="ATTACKER" birthDate="1988-08-21T00:00:00.000+0200" age="36" number="9">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="10" assists="3" yellowCards="1" redCards="0"/>
+    </players>
+    <players name="Marc-André ter Stegen" position="GOALKEEPER" birthDate="1992-04-30T00:00:00.000+0200" age="32" number="1">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="25" yellowCards="1"/>
+    </players>
+  </teams>
+  <teams name="Juventus" managerName="Massimiliano Allegri">
+    <players name="Federico Chiesa" position="MIDFIELDER" birthDate="1997-10-25T00:00:00.000+0200" age="27" number="22">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="4" assists="6" yellowCards="3"/>
+    </players>
+    <players name="Leonardo Bonucci" position="DEFENDER" birthDate="1987-05-01T00:00:00.000+0200" age="37" number="19">
+      <playerstatistics xsi:type="fta_domain_model:Defender" goals="0" yellowCards="2"/>
+    </players>
+  </teams>
+  <teams name="Atletico Madrid" managerName="Diego Simeone">
+    <players name="João Félix" position="ATTACKER" birthDate="1999-11-10T00:00:00.000+0100" age="25" number="7">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="6" assists="4" yellowCards="1"/>
+    </players>
+    <players name="Jan Oblak" position="GOALKEEPER" birthDate="1993-01-07T00:00:00.000+0100" age="31" number="13">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="30" yellowCards="0"/>
+    </players>
+  </teams>
+  <teams name="Napoli" managerName="Luciano Spalletti">
+    <players name="Victor Osimhen" position="ATTACKER" birthDate="1998-12-29T00:00:00.000+0100" age="26" number="9">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="12" assists="2" yellowCards="2"/>
+    </players>
+    <players name="Kalidou Koulibaly" position="DEFENDER" birthDate="1991-06-20T00:00:00.000+0200" age="33" number="26">
+      <playerstatistics xsi:type="fta_domain_model:Defender" goals="1" yellowCards="5"/>
+    </players>
+  </teams>
+  <teams name="AC Milan" managerName="Stefano Pioli">
+    <players name="Olivier Giroud" position="ATTACKER" birthDate="1986-09-30T00:00:00.000+0200" age="38" number="9">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="5" assists="1" yellowCards="1"/>
+    </players>
+    <players name="Theo Hernandez" position="DEFENDER" birthDate="1997-10-06T00:00:00.000+0200" age="27" number="19">
+      <playerstatistics xsi:type="fta_domain_model:Defender" goals="2" yellowCards="3"/>
+    </players>
+  </teams>
+  <teams name="Tottenham Hotspur" managerName="Ange Postecoglou">
+    <players name="Harry Kane" position="ATTACKER" birthDate="1993-07-28T00:00:00.000+0100" age="31" number="10">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="15" assists="5" yellowCards="1"/>
+    </players>
+    <players name="Hugo Lloris" position="GOALKEEPER" birthDate="1986-12-26T00:00:00.000+0100" age="38" number="1">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="18" yellowCards="2"/>
+    </players>
+  </teams>
+  <teams name="Sevilla" managerName="José Luis Mendilibar">
+    <players name="Youssef En-Nesyri" position="ATTACKER" birthDate="1997-06-01T00:00:00.000+0100" age="27" number="15">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="7" assists="3" yellowCards="0"/>
+    </players>
+    <players name="Jules Koundé" position="DEFENDER" birthDate="1998-11-12T00:00:00.000+0100" age="26" number="23">
+      <playerstatistics xsi:type="fta_domain_model:Defender" goals="1" yellowCards="4"/>
+    </players>
+  </teams>
+  <tournamentformat xsi:type="fta_domain_model:SingleElimination" maxTeams="8" minTeams="2" description="A single elimination tournament where the losing team in each match is eliminated." numberOfRounds="3"/>
+  <brackets>
+    <matches scoreTeam1="3" scoreTeam2="1" day="2024-11-15T00:00:00.000+0100" teams="//@teams.0 //@teams.1" matchID="1">
+      <matchrules xsi:type="fta_domain_model:Standard" tieBreaking="false" extraTime="false" />
+    </matches>
+    <matches scoreTeam1="2" scoreTeam2="0" day="2024-11-16T00:00:00.000+0100" teams="//@teams.2 //@teams.3" matchID="2">
+      <matchrules xsi:type="fta_domain_model:Standard" tieBreaking="false" extraTime="false" />
+    </matches>
+    <matches scoreTeam1="1" scoreTeam2="1" day="2024-11-17T00:00:00.000+0100" teams="//@teams.4 //@teams.5" matchID="3">
+      <matchrules xsi:type="fta_domain_model:ExtraTime" extraTime="true" extraTimeDuration="30"/>
+    </matches>
+    <matches scoreTeam1="4" scoreTeam2="3" day="2024-11-18T00:00:00.000+0100" teams="//@teams.6 //@teams.7" matchID="4">
+      <matchrules xsi:type="fta_domain_model:PenaltyShootout" />
+    </matches>
+  </brackets>
+</fta_domain_model:Tournament>

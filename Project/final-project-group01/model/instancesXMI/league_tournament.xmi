@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fta_domain_model:Tournament xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fta_domain_model="http://www.example.org/fta_domain_model" name="League" tournamentType="LEAGUE">
+  <teams name="Vålerenga" managerName="Dag-Eilev Fagermo">
+    <players name="Henrik Bjørdal" position="MIDFIELDER" birthDate="1997-02-24T00:00:00.000+0100" age="27" number="8">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="3" assists="5" fouls="1" yellowCards="2" redCards="0"/>
+    </players>
+    <players name="Stefan Strandberg" birthDate="1990-07-25T00:00:00.000+0200" age="34" number="4">
+      <playerstatistics xsi:type="fta_domain_model:Defender" fouls="1" yellowCards="1"/>
+    </players>
+  </teams>
+  <teams name="Molde" managerName="Erling Moe">
+    <players name="Magnus Wolff Eikrem" position="MIDFIELDER" birthDate="1990-08-08T00:00:00.000+0200" age="34" number="7">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="4" assists="3"/>
+    </players>
+    <players name="Andreas Linde" position="GOALKEEPER" birthDate="1993-07-24T00:00:00.000+0200" age="31" number="1">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="15"/>
+    </players>
+  </teams>
+  <teams name="Brann" managerName="Eirik Horneland">
+    <players name="Børge Johansen" birthDate="2001-04-12T00:00:00.000+0200" age="23" number="14">
+      <playerstatistics xsi:type="fta_domain_model:Defender" fouls="2" yellowCards="1"/>
+    </players>
+    <players name="Mads Smith" position="GOALKEEPER" birthDate="2000-11-15T00:00:00.000+0100" age="24" number="13">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="12"/>
+    </players>
+  </teams>
+  <teams name="Kristiansund" managerName="Christian Michelsen">
+    <players name="Pål Erik Ulvestad" position="MIDFIELDER" birthDate="1990-09-08T00:00:00.000+0200" age="34" number="6">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" assists="3" goals="2"/>
+    </players>
+    <players name="Serigne Mbaye" position="GOALKEEPER" birthDate="1998-10-10T00:00:00.000+0200" age="26" number="23">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="17"/>
+    </players>
+  </teams>
+  <teams name="Stabæk" managerName="Lars Bohinen">
+    <players name="Kaspar Junker" position="ATTACKER" birthDate="1994-03-05T00:00:00.000+0100" age="30" number="11">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="6"/>
+    </players>
+    <players name="Emil Jonassen" birthDate="1993-06-18T00:00:00.000+0200" age="31" number="3">
+      <playerstatistics xsi:type="fta_domain_model:Defender" yellowCards="2"/>
+    </players>
+  </teams>
+  <teams name="Sarpsborg 08" managerName="Steffen Stegavik">
+    <players name="Mohamed Ofkir" position="ATTACKER" birthDate="1996-08-04T00:00:00.000+0200" age="28" number="19">
+      <playerstatistics xsi:type="fta_domain_model:Attacker" goals="5" assists="2"/>
+    </players>
+    <players name="Aslak Falch" position="GOALKEEPER" birthDate="1992-05-25T00:00:00.000+0200" age="32" number="1">
+      <playerstatistics xsi:type="fta_domain_model:Goalkeeper" saves="20"/>
+    </players>
+  </teams>
+  <tournamentformat xsi:type="fta_domain_model:DoubleElimination" maxTeams="6" minTeams="4" description="Double elimination tournament with varying match rules, including extra time and penalty shootout." numberOfRounds="3"/>
+  <brackets>
+    <matches scoreTeam1="3" scoreTeam2="2" day="2024-12-01T00:00:00.000+0100" teams="//@teams.0 //@teams.1" matchID="1">
+      <matchrules xsi:type="fta_domain_model:ExtraTime" extraTime="true" extraTimeDuration="15"/>
+    </matches>
+    <matches scoreTeam1="2" scoreTeam2="2" day="2024-12-03T00:00:00.000+0100" teams="//@teams.2 //@teams.3" matchID="2">
+      <matchrules xsi:type="fta_domain_model:PenaltyShootout"/>
+    </matches>
+    <matches scoreTeam1="1" scoreTeam2="3" day="2024-12-05T00:00:00.000+0100" teams="//@teams.4 //@teams.5" matchID="3">
+      <matchrules xsi:type="fta_domain_model:ExtraTime" extraTime="true" extraTimeDuration="15"/>
+    </matches>
+    <matches scoreTeam1="0" scoreTeam2="1" day="2024-12-07T00:00:00.000+0100" teams="//@teams.1 //@teams.3" matchID="4">
+      <matchrules xsi:type="fta_domain_model:ExtraTime" extraTime="true" extraTimeDuration="10"/>
+    </matches>
+  </brackets>
+</fta_domain_model:Tournament>

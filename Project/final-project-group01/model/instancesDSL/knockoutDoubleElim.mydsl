@@ -1,0 +1,483 @@
+Tournament "World Cup" {
+    tournamentType KNOCKOUT
+    teams {
+        Team "Juventus" {
+            teamSize 3
+            managerName "Thiago Motta"
+            players {
+                Player "Michele Di Gregorio" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 9
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 2
+                        saves 30
+                    }
+          		},
+                Player "Arkadiusz Milik" {
+                    position ATTACKER
+                    number 14
+                    playerstatistics Attacker {
+                        goals 12
+                        assists 5
+                        fouls 3
+                        yellowCards 0
+                        redCards 1
+                        sprintSpeed 92
+               		}
+                },
+                Player "Pierre Kalulu" {
+                    position DEFENDER
+                    number 15
+                    playerstatistics Defender {
+                        goals 4
+                        assists 2
+                        fouls 3
+                        yellowCards 4
+                        redCards 1
+                        cleansheets 85
+                    }
+                }
+            }
+        },
+        Team "Barcelona" {
+            teamSize 3
+            managerName "Hans Dieter Flick"
+            players {
+                Player "Marc-Andre Stegen" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 2
+                        yellowCards 3
+                        redCards 0
+                        cleansheets 14
+                        saves 13
+                    }
+          		},
+                Player "Robert Lewandowski" {
+                    position ATTACKER
+                    number 9
+                    playerstatistics Attacker {
+                        goals 59
+                        assists 21
+                        fouls 3
+                        yellowCards 4
+                        redCards 1
+                        sprintSpeed 96
+               		}
+                },
+                Player "Dani Olmo" {
+                    position DEFENDER
+                    number 20
+                    playerstatistics Defender {
+                        goals 10
+                        assists 4
+                        fouls 3
+                        yellowCards 3
+                        redCards 5
+                        cleansheets 31
+                    }
+                }
+            }
+        },
+        Team "PSG" {
+            teamSize 3
+            managerName "Luis Enrique Martínez Garcia"
+            players {
+                Player "Gianluigi Doonarumma" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 2
+                        yellowCards 6
+                        redCards 1
+                        cleansheets 10
+                        saves 54
+                    }
+          		},
+                Player "Bradley Barcola" {
+                    position ATTACKER
+                    number 29
+                    playerstatistics Attacker {
+                        goals 51
+                        assists 16
+                        fouls 2
+                        yellowCards 4
+                        redCards 1
+                        sprintSpeed 84
+               		}
+                },
+                Player "Achraf Hakimi" {
+                    position DEFENDER
+                    number 2
+                    playerstatistics Defender {
+                        goals 21
+                        assists 8
+                        fouls 1
+                        yellowCards 4
+                        redCards 7
+                        cleansheets 53
+                    }
+                }
+            }
+        },
+        Team "Real Madrid" {
+    		teamSize 3
+    		managerName "Carlo Ancelotti"
+    		players {
+        		Player "Thibaut Courtois" {
+            		position GOALKEEPER
+            		number 1
+            		playerstatistics Goalkeeper {
+                	goals 0
+              	    assists 0
+                	fouls 3
+                	yellowCards 2
+                	redCards 0
+                	cleansheets 15
+                	saves 68
+            }
+        },
+        Player "Vinícius Júnior" {
+            position ATTACKER
+            number 7
+            playerstatistics Attacker {
+                goals 24
+                assists 12
+                fouls 6
+                yellowCards 3
+                redCards 1
+                sprintSpeed 95
+            }
+        },
+        Player "David Alaba" {
+            position DEFENDER
+            number 4
+            playerstatistics Defender {
+                goals 8
+                assists 5
+                fouls 4
+                yellowCards 6
+                redCards 2
+                cleansheets 20
+            }
+        }
+    }
+},
+Team "Bayern Munich" {
+    teamSize 3
+    managerName "Thomas Tuchel"
+    players {
+        Player "Manuel Neuer" {
+            position GOALKEEPER
+            number 1
+            playerstatistics Goalkeeper {
+                goals 0
+                assists 1
+                fouls 1
+                yellowCards 2
+                redCards 0
+                cleansheets 22
+                saves 67
+            }
+        },
+        Player "Joshua Kimmich" {
+            position MIDFIELDER
+            number 6
+            playerstatistics Defender {
+                goals 12
+                assists 20
+                fouls 8
+                yellowCards 5
+                redCards 0
+                cleansheets 15
+            }
+        },
+        Player "Leroy Sané" {
+            position ATTACKER
+            number 10
+            playerstatistics Attacker {
+                goals 35
+                assists 18
+                fouls 4
+                yellowCards 3
+                redCards 0
+                sprintSpeed 89
+            }
+        }
+    }
+},
+Team "Manchester City" {
+    teamSize 3
+    managerName "Pep Guardiola"
+    players {
+        Player "Ederson Moraes" {
+            position GOALKEEPER
+            number 31
+            playerstatistics Goalkeeper {
+                goals 0
+                assists 2
+                fouls 3
+                yellowCards 1
+                redCards 0
+                cleansheets 19
+                saves 60
+            }
+        },
+        Player "Kevin De Bruyne" {
+            position MIDFIELDER
+            number 17
+            playerstatistics Defender {
+                goals 15
+                assists 25
+                fouls 5
+                yellowCards 3
+                redCards 0
+                cleansheets 12
+            }
+        },
+        Player "Erling Haaland" {
+            position ATTACKER
+            birthDate 2024-03-03
+            number 9
+            playerstatistics Attacker {
+                goals 60
+                assists 10
+                fouls 6
+                yellowCards 2
+                redCards 1
+                sprintSpeed 90
+            }
+        }
+    }
+},
+Team "Manchester United" {
+    teamSize 3
+    managerName "Erik ten Hag"
+    players {
+        Player "David de Gea" {
+            position GOALKEEPER
+            number 1
+            playerstatistics Goalkeeper {
+                goals 0
+                assists 0
+                fouls 1
+                yellowCards 2
+                redCards 0
+                cleansheets 12
+                saves 67
+            }
+        },
+        Player "Bruno Fernandes" {
+            position MIDFIELDER
+            number 8
+            playerstatistics Defender {
+                goals 12
+                assists 18
+                fouls 5
+                yellowCards 4
+                redCards 1
+                cleansheets 10
+            }
+        },
+        Player "Marcus Rashford" {
+            position ATTACKER
+            number 10
+            playerstatistics Attacker {
+                goals 28
+                assists 10
+                fouls 6
+                yellowCards 3
+                redCards 0
+                sprintSpeed 90
+            }
+        }
+    }
+},
+
+
+        
+        Team "Chelsea" {
+            teamSize 3
+            managerName "Enzo Maresca"
+            players {
+                Player "Robert Sanchez" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 4
+                        redCards 0
+                        cleansheets 4
+                        saves 32
+                    }
+          		},
+                Player "Joao Felix" {
+                    position ATTACKER
+                    number 14
+                    playerstatistics Attacker {
+                        goals 23
+                        assists 1
+                        fouls 5
+                        yellowCards 4
+                        redCards 1
+                        sprintSpeed 76
+               		}
+                },
+                Player "Marc Cucurella" {
+                    position DEFENDER
+                    number 3
+                    playerstatistics Defender {
+                        goals 10
+                        assists 4
+                        fouls 5
+                        yellowCards 2
+                        redCards 1
+                        cleansheets 32
+                    }
+                }
+            }
+        }
+    }
+    
+    tournamentformat Knockout "Double Elimination" {
+        maxTeams 16
+        minTeams 4
+        description "Double-elimination tournament"
+        numberOfRounds 4
+    }
+
+    brackets {
+        Bracket {
+            rounds 1
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2008-10-09
+                    teams ("Juventus", "Barcelona")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 3
+                    scoreTeam2 2
+                    matchResult WIN
+                    day 2008-10-13
+                    teams ("PSG", "Real Madrid")
+                    matchrules ExtraTime {
+                        extraTimeDuration 30
+                    }
+                }
+            }
+        },
+        
+        Bracket {
+            rounds 1
+            bracketSide LOWER
+            matches {
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 2
+                    matchResult LOSS
+                    day 2008-10-14
+                    teams ("Juventus", "PSG")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2008-10-18
+                    teams ("Real Madrid", "Manchester United")
+                    matchrules Standard
+                }
+            }
+        },
+        
+        Bracket {
+            rounds 1
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2008-10-20
+                    teams ("Bayern Munich", "Manchester City")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 3
+                    scoreTeam2 2
+                    matchResult WIN
+                    day 2008-10-21
+                    teams ("Chelsea", "Manchester United")
+                    matchrules Standard
+                }
+            }
+        },
+        
+        Bracket {
+            rounds 1
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2008-10-21
+                    teams ("PSG", "Manchester City")
+                    matchrules ExtraTime {
+                    	extraTime true
+                        extraTimeDuration 30
+                    }
+                }
+            }
+        },
+
+        Bracket {
+            rounds 1
+            bracketSide LOWER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 0
+                    matchResult WIN
+                    day 2008-10-22
+                    teams ("PSG", "Bayern Munich")
+                    matchrules Standard
+                }
+            }
+        },
+
+        Bracket {
+            rounds 1
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 2008-11-01
+                    teams ("PSG", "Manchester City")
+                    matchrules ExtraTime {
+                        extraTimeDuration 30
+                    }
+                }
+            }
+        }
+    }
+}

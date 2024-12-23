@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fta_domain_model" nsURI="http://www.example.org/fta_domain_model"
+    nsPrefix="fta_domain_model">
+  <eClassifiers xsi:type="ecore:EClass" name="Team">
+    <eAnnotations source="teamConstraint">
+      <details key="teamSizeConstraint" value="self.players->size() >= 2"/>
+      <details key="teamTotalGoalsConstraint" value="self.players->collect(player | player.playerstatistics.goals)->sum()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="players" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Player" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="managerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalGoals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"
+        derived="true" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tournament">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tournamentType" eType="#//TournamentType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teams" ordered="false"
+        upperBound="-1" eType="#//Team" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tournamentformat" lowerBound="1"
+        eType="#//TournamentFormat" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfTeams" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="brackets" lowerBound="1"
+        upperBound="-1" eType="#//Bracket" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Match">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="UniqueTeams" value="self.teams->size() = 2 and self.teams->forAll(t1, t2 | t1 &lt;> t2)"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="UniqueTeams"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scoreTeam1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scoreTeam2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matchResult" eType="#//MatchResult"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teams" lowerBound="2" upperBound="2"
+        eType="#//Team" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchrules" lowerBound="1"
+        eType="#//MatchRules" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matchID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Player">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//PlayerPosition"
+        defaultValueLiteral="MIDFIELDER"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playerstatistics" lowerBound="1"
+        eType="#//PlayerStatistics" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="playerID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" defaultValueLiteral="0" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bracket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rounds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bracketSide" eType="#//BracketSide"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matches" lowerBound="1"
+        upperBound="-1" eType="#//Match" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bracketID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMatches" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" defaultValueLiteral="0" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tournaments" ordered="false"
+        upperBound="-1" eType="#//Tournament" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canModifyTournament" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canViewStats" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canManageTeams" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        defaultValueLiteral="0" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TournamentFormat" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="ValidTeamRange" value="self.minTeams &lt;= self.maxTeams"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidTeamRange"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxTeams" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minTeams" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="League" eSuperTypes="#//TournamentFormat">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRounds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="finalsFormat" eType="#//FinalsFormat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoundRobin" eSuperTypes="#//TournamentFormat">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointsForWin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointsForDraw" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointsForLoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRounds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieBreakerRule" eType="#//TieBreakerRule"
+        defaultValueLiteral="GOAL_DIFFERENCE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Knockout" eSuperTypes="#//TournamentFormat">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRounds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasThirdPlacePlayoff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MatchRules" abstract="true">
+    <eOperations name="applyRules"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PlayerPosition">
+    <eLiterals name="GOALKEEPER"/>
+    <eLiterals name="DEFENDER" value="1"/>
+    <eLiterals name="MIDFIELDER" value="2"/>
+    <eLiterals name="ATTACKER" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Standard" eSuperTypes="#//MatchRules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieBreaking" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extraTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="penaltyShootouts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtraTime" eSuperTypes="#//MatchRules">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="ValidExtraTime" value="self.extraTime = false implies self.extraTimeDuration = 0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidExtraTime"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extraTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extraTimeDuration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PenaltyShootout" eSuperTypes="#//MatchRules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="penaltyShootouts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupStage" eSuperTypes="#//MatchRules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieBreaking" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerStatistics" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assists" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fouls" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yellowCards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redCards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Defender" eSuperTypes="#//PlayerStatistics">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cleansheets" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goalkeeper" eSuperTypes="#//PlayerStatistics">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cleansheets" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="saves" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TournamentType">
+    <eLiterals name="KNOCKOUT" literal="KNOCKOUT"/>
+    <eLiterals name="LEAGUE" value="1" literal="LEAGUE"/>
+    <eLiterals name="ROUND_ROBIN" value="2" literal="ROUND_ROBIN"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MatchResult">
+    <eLiterals name="WIN" literal="WIN"/>
+    <eLiterals name="LOSS" value="1" literal="LOSS"/>
+    <eLiterals name="DRAW" value="2" literal="DRAW"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BracketSide">
+    <eLiterals name="UPPER" literal="UPPER"/>
+    <eLiterals name="LOWER" value="1" literal="LOWER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FinalsFormat">
+    <eLiterals name="SINGLE_FINAL"/>
+    <eLiterals name="BEST_OF_THREE" value="1" literal="BEST_OF_THREE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TieBreakerRule">
+    <eLiterals name="GOAL_DIFFERENCE"/>
+    <eLiterals name="HEAD_TO_HEAD" value="1" literal="HEAD_TO_HEAD"/>
+    <eLiterals name="GOALS_SCORED" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attacker" eSuperTypes="#//PlayerStatistics">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sprintSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sprint speed in km/t."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

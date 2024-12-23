@@ -1,0 +1,243 @@
+Tournament "European Championship 2024" {
+    tournamentType ROUND_ROBIN
+    teams {
+        Team "Germany" {
+            teamSize 3
+            managerName "Hansi Flick"
+            players {
+                Player "Manuel Neuer" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 6
+                        saves 30
+                    }
+                },
+                Player "Thomas Müller" {
+                    position ATTACKER
+                    number 25
+                    playerstatistics Attacker {
+                        goals 5
+                        assists 3
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        sprintSpeed 82
+                    }
+                },
+                Player "Joshua Kimmich" {
+                    position MIDFIELDER
+                    number 6
+                    playerstatistics Attacker {
+                        goals 2
+                        assists 4
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 80
+                    }
+                }
+            }
+        },
+        Team "Italy" {
+            teamSize 3
+            managerName "Roberto Mancini"
+            players {
+                Player "Gianluigi Donnarumma" {
+                    position GOALKEEPER
+                    number 21
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 7
+                        saves 34
+                    }
+                },
+                Player "Lorenzo Insigne" {
+                    position ATTACKER
+                    number 24
+                    playerstatistics Attacker {
+                        goals 4
+                        assists 2
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 87
+                    }
+                },
+                Player "Leonardo Bonucci" {
+                    position DEFENDER
+                    number 19
+                    playerstatistics Defender {
+                        goals 1
+                        assists 1
+                        fouls 3
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 6
+                    }
+                }
+            }
+        },
+        Team "France" {
+            teamSize 3
+            managerName "Didier Deschamps"
+            players {
+                Player "Hugo Lloris" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 1
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 8
+                        saves 45
+                    }
+                },
+                Player "Kylian Mbappé" {
+                    position ATTACKER
+                    number 10
+                    playerstatistics Attacker {
+                        goals 6
+                        assists 2
+                        fouls 3
+                        yellowCards 0
+                        redCards 0
+                        sprintSpeed 91
+                    }
+                },
+                Player "Raphaël Varane" {
+                    position DEFENDER
+                    number 4
+                    playerstatistics Defender {
+                        goals 2
+                        assists 1
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        cleansheets 7
+                    }
+                }
+            }
+        },
+        Team "Spain" {
+            teamSize 3
+            managerName "Luis Enrique"
+            players {
+                Player "David De Gea" {
+                    position GOALKEEPER
+                    number 1
+                    playerstatistics Goalkeeper {
+                        goals 0
+                        assists 0
+                        fouls 2
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 6
+                        saves 40
+                    }
+                },
+                Player "Sergio Ramos" {
+                    position DEFENDER
+                    number 15
+                    playerstatistics Defender {
+                        goals 3
+                        assists 2
+                        fouls 4
+                        yellowCards 2
+                        redCards 0
+                        cleansheets 5
+                    }
+                },
+                Player "Gerard Moreno" {
+                    position ATTACKER
+                    number 7
+                    playerstatistics Attacker {
+                        goals 4
+                        assists 3
+                        fouls 2
+                        yellowCards 1
+                        redCards 0
+                        sprintSpeed 80
+                    }
+                }
+            }
+        }
+    }
+    tournamentformat RoundRobin "Euro Cup 2024" {
+        maxTeams 4
+        minTeams 4
+        description "Round Robin tournament where each team plays against each other"
+        pointsForWin 3
+        pointsForDraw 1
+        pointsForLoss 0
+        numberOfRounds 6
+        tieBreakerRule GOAL_DIFFERENCE
+    }
+    brackets {
+        Bracket {
+            rounds 1
+            bracketSide UPPER
+            matches {
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 1997-04-05
+                    teams ("Germany", "Italy")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 3
+                    scoreTeam2 1
+                    matchResult WIN
+                    day 1997-04-08
+                    teams ("France", "Spain")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 2
+                    matchResult LOSS
+                    day 1997-04-10
+                    teams ("Italy", "France")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 0
+                    scoreTeam2 3
+                    matchResult LOSS
+                    day 1997-04-12
+                    teams ("Germany", "Spain")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 1
+                    scoreTeam2 1
+                    matchResult DRAW
+                    day 1997-04-16
+                    teams ("Germany", "France")
+                    matchrules Standard
+                },
+                Match {
+                    scoreTeam1 2
+                    scoreTeam2 0
+                    matchResult WIN
+                    day 1997-04-19
+                    teams ("Spain", "Italy")
+                    matchrules Standard
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+# Eclipse specific files
+.metadata/
+.project
+.classpath
+.settings/
+
+# Mac-specific files
+.DS_Store
+
+# Java build files
+bin/
+target/
+build/
+
+# Maven specific files
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore Eclipse JDT specific files
+.recommenders/
+
+# Ignore specific to Eclipse EGit
+/.git/
