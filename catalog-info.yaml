@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: TDT4250-Model-Driven-Software-Engineering
+spec:
+  type: documentation
+  owner: group:default/backstage_test
+  lifecycle: experimental
